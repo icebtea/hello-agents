@@ -15,9 +15,9 @@ class HelloAgentsLLM:
         """
         初始化客户端。优先使用传入参数，如果未提供，则从环境变量加载。
         """
-        self.model = model or os.getenv("LLM_MODEL_ID")
-        apiKey = apiKey or os.getenv("LLM_API_KEY")
-        baseUrl = baseUrl or os.getenv("LLM_BASE_URL")
+        self.model = model or os.getenv("MODEL_ID")
+        apiKey = apiKey or os.getenv("API_KEY")
+        baseUrl = baseUrl or os.getenv("BASE_URL")
         timeout = timeout or int(os.getenv("LLM_TIMEOUT", 60))
         
         if not all([self.model, apiKey, baseUrl]):
@@ -37,7 +37,7 @@ class HelloAgentsLLM:
                 temperature=temperature,
                 stream=True,
             )
-            
+            print(response)
             # 处理流式响应
             print("✅ 大语言模型响应成功:")
             collected_content = []
