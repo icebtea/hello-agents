@@ -1,4 +1,4 @@
-LLM_MODEL_ID="YOUR-MODEL"
-LLM_API_KEY="YOUR-API-KEY"
-LLM_BASE_URL="YOUR-URL"
+LLM_MODEL_ID="deepseek-v4-pro"
+LLM_API_KEY="sk-zk28e89652fbcb9185a5e75035d69d30f1b68130f9f86a44"
+LLM_BASE_URL="https://api.zhizengzeng.com/v1/chat/completions"
 LLM_TIMEOUT=60
